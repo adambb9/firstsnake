@@ -13,13 +13,14 @@ screen.tracer(0)
 
 snake = Snake()
 
+snake.initialise_snake()
 
 game_is_on = True
 
 while game_is_on:
     screen.update()
     time.sleep(1)
-    snake.body
+    snake.move_snake()
     
 
     
