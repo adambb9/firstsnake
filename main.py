@@ -13,7 +13,7 @@ screen.tracer(0)
 
 snake = Snake()
 
-snake.initialise_snake()
+snake.initialise_snake(25)
 
 game_is_on = True
 
