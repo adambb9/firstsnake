@@ -32,26 +32,15 @@ class Snake:
             self.body[segment].goto(new_x, new_y)
         self.body[0].forward(MOVE_DISTANCE)
 
-    #def snake_heading(self):
-        #screen.listen()
-        #screen.onkey(key="w", fun=move_forwards)
-        #screen.onkey(key="s", fun=move_backwards)
-        #screen.onkey(key="a", fun=turn_left)
-        #screen.onkey(key="d", fun=turn_right)
-        #screen.onkey(key="c", fun=clear)
+    def up(self):
+        self.body[0].setheading(90)
 
-    
+    def right(self):
+        self.body[0].setheading(0)
 
+    def left(self):
+        self.body[0].setheading(180)
 
-    def move_forwards():
-        self.body[0].forward(10)
-
-    def turn_right():
-        self.body[0].right(10)
-
-    def turn_left():
-        self.body[0].left(10)
-
-    def move_backwards():
-        self.body[0].backward(10)
+    def down(self):
+        self.body[0].setheading(270)
 
