@@ -17,7 +17,6 @@ class Scoreboard(Turtle):
 
     #score board writes to screen but doesnt update
     def update_score(self):
-        self.clear()
         self.write(F"Score: {self.score}", align=ALIGNMENT, font=FONT)
         
     
