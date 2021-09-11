@@ -49,10 +49,8 @@ while game_is_on:
         scoreboard.game_over()
 
     #detect collision with tail
-    for segment in snake.body:
-        if segment == snake.body[0]:
-            pass
-        elif snake.body[0].distance(segment) < 10:
+    for segment in snake.body[1:]:
+        if snake.body[0].distance(segment) < 10:
             game_is_on = False
             scoreboard.game_over()
 
