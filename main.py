@@ -15,7 +15,7 @@ screen.tracer(0)
 
 snake = Snake()
 
-snake.initialise_snake(1)
+snake.initialise_snake(3)
 
 food = Food()
 
@@ -48,7 +48,13 @@ while game_is_on:
         game_is_on = False
         scoreboard.game_over()
 
-        
+    #detect collision with tail
+    for segment in snake.body:
+        if segment == snake.body[0]:
+            pass
+        elif snake.body[0].distance(segment) < 10:
+            game_is_on = False
+            scoreboard.game_over()
 
 
 
