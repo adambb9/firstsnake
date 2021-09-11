@@ -15,7 +15,7 @@ screen.tracer(0)
 
 snake = Snake()
 
-snake.initialise_snake(10)
+snake.initialise_snake(1)
 
 food = Food()
 
@@ -37,13 +37,16 @@ while game_is_on:
     
     #detect collision with food
     if snake.body[0].distance(food) < 15:
+        snake.extend_snake()
         scoreboard.increase_score(1)
         food.refresh()
+    
 
 
     #detect collision with wall
     if snake.body[0].xcor() > 280 or snake.body[0].xcor() < -295 or snake.body[0].ycor() > 295 or snake.body[0].ycor() < -280:
         game_is_on = False
+        scoreboard.game_over()
 
         
 
